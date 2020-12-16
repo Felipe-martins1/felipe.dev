@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --background-color:white;
+    --title-color: #a189fa;
+    --primary-color: #1D1A1A;
+
+    transition: 0.6s;
+}
+html{
+    background-color:var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    color: var(--primary-color);
+}
+.dark-mode:root{
+    --background-color:#1D1A1A;
+    --title-color: #8262F9;
+    --primary-color: white;
+
+    transition: 0.6s;
+}
+.color-mode{
+    text-align: end;
+    font-size: 36px;
+    margin-top: 30px;
+    margin-right: 200px;
+}
+.color-mode .sun{
+    margin-right: 10px;
+}
+.color-mode .icon:hover{
+    color: var(--title-color);
+    transition: 0.4s;
+}
+.color-mode .selected{
+    color: var(--title-color);
+}
+#main{
+    text-align: center;
+    margin-top: 150px;
+    height: 100vh;
+}
+#main .title h1{
+    font-size: 96px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+#main .title h1 span{
+    color: var(--title-color);
+}
+#main .title h2{
+    font-weight: lighter;
+    font-size: 64px;
+    color:var(--primary-color);
+}
+
+#main .title h2.contact{
+    margin-top: 10px;
+    font-size: 70px;
+}
+#main .title span{
+    cursor: pointer;
+    transition: 0.4s;
+}
+#main .title span:hover{
+    color: var(--title-color);
+}
+#main .title p{
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+#main .BiChevronsDown{
+    color: var(--primary-color);
+    font-size: 100px;
+    margin-top: 60px;
+    cursor: pointer;
+    animation: jump 4s infinite;
+    transition: 0.4s;
+}
+
+#main .BiChevronsDown:hover{
+    color: var(--title-color);
+    animation: none;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#about-me{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 24px;
+
+    border: 5px solid var(--title-color);
+    border-radius: 5px;
+
+    padding: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+#about-me h1{
+    color: var(--title-color);
+    margin-bottom: 20px;
+}
+#about-me p{
+    font-weight: lighter;
+}
+
+#projects{
+    margin-top: 100px;
+}
+
+#projects .title{
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+.title h1{
+    margin-bottom: 5px;
+}
+#projects .repos{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 12px;
+    
+    margin-bottom: 10px;
+
+    animation: gridAnimation 5s;
+}
+
+
+
+.repos .repo{
+    cursor: pointer;
+    background-color: var(--background-color);
+    border: 1px solid var(--title-color);
+    border-radius: 5px;
+    padding: 20px;
+    color: var(--primary-color);
+
+    transition: 0.4s;
+}
+.repos .repo:hover{
+    background-color: var(--title-color);
+    border: 1px solid var(--background-color);
+    color: var(--primary-color);
+}
+.repo p{
+    font-size: 15px;
+}
