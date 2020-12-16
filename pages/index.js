@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import getUser from '../utils/getUser'
+import Head from 'next/head'
 
 import { BiChevronsDown, BiSun, BiMoon } from "react-icons/bi"
 import { AiOutlineStar, AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
@@ -32,6 +33,9 @@ const Index = (props) => {
     }
     return (
         <div>
+            <Head>
+                <title>Felipe.dev</title>
+            </Head>
             <div className='color-mode'>
                 <BiSun className='icon sun' onClick={LightcolorMode} /><BiMoon className='icon moon' onClick={DarkcolorMode} />
             </div>
@@ -62,7 +66,7 @@ const Index = (props) => {
             </div>
             <div id='projects'>
                 <div className='title'>
-                    <h1>Some projects</h1>
+                    <h1>Tech Contributions</h1>
                     <GoRepo /><span> {props.repos.length}</span>
                 </div>
                 <div className='repos'>
