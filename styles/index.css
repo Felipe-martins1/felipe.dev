@@ -164,6 +164,8 @@ html{
     background-color: var(--title-color);
     border: 1px solid var(--background-color);
     color: var(--primary-color);
+
+    opacity: 80%;
 }
 .repo p{
     font-size: 15px;
