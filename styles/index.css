@@ -193,6 +193,7 @@ html{
     #about-me{
         width: 250vw;
         margin: 0;
+        margin-top: 200px;
     }
     #about-me p{
         font-size: 30px;
@@ -206,7 +207,7 @@ html{
     }
     #projects .repos{
         grid-template-columns: auto auto;
-        margin-left: 10px;
+
     }
     .repo h1{
         font-size: 40px;
