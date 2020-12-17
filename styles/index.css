@@ -200,7 +200,7 @@ html{
         font-size: 30px;
     }
     #projects .title{
-        width: 250vw;
+        margin-left: 50px;
     }
     #projects{
         width: 280vw;
