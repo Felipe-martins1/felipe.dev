@@ -176,3 +176,42 @@ html{
 .repo p{
     font-size: 15px;
 }
+
+@media screen and (max-width: 769px){
+    #main{
+        width: 250vw;
+    }
+    #main .title h1{
+        font-size: 120px;
+    }
+    #main span{
+        font-size: 120px;
+    }
+    #main .title p{
+        font-size: 30px;
+    }
+    #about-me{
+        width: 250vw;
+        margin: 0;
+    }
+    #about-me p{
+        font-size: 30px;
+    }
+    #projects .title{
+        width: 250vw;
+    }
+
+    .color-mode{
+        font-size: 74px;
+    }
+    #projects .repos{
+        grid-template-columns: auto auto;
+        margin-left: 10px;
+    }
+    .repo h1{
+        font-size: 40px;
+    }
+    .repo p{
+        font-size: 30px;
+    }
+}
