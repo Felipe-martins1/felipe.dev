@@ -180,6 +180,7 @@ html{
 @media screen and (max-width: 769px){
     #main{
         width: 250vw;
+        margin-left: 50px;
     }
     #main .title h1{
         font-size: 120px;
@@ -191,7 +192,7 @@ html{
         font-size: 30px;
     }
     #about-me{
-        width: 250vw;
+        width: 270vw;
         margin: 0;
         margin-top: 200px;
     }
@@ -201,13 +202,17 @@ html{
     #projects .title{
         width: 250vw;
     }
+    #projects{
+        width: 280vw;
+    }
 
     .color-mode{
         font-size: 74px;
     }
     #projects .repos{
         grid-template-columns: auto auto;
-
+        margin: 0;
+        width: 100%;
     }
     .repo h1{
         font-size: 40px;
