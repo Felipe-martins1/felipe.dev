@@ -210,9 +210,12 @@ html{
         font-size: 74px;
     }
     #projects .repos{
-        grid-template-columns: auto auto;
+        display: inline;
         margin: 0;
         width: 100%;
+    }
+    .repo{
+        margin-bottom: 10px;
     }
     .repo h1{
         font-size: 40px;
