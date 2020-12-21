@@ -1,5 +1,8 @@
 # FelipeMartins.dev(Resume)
 
+[![HitCount](https://hits.dwyl.com/Felipe-martins1/Felipe-martins1/felipedev.svg)](https://hits.dwyl.com/Felipe-martins1/Felipe-martins1/felipedev)
+
+
 This project is the source code of my personal website
 (https://felipe-martins1-dev.vercel.app/)
 
