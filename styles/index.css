@@ -145,7 +145,6 @@ html{
     
     margin-bottom: 10px;
 
-    animation: gridAnimation 5s;
 }
 
 
@@ -158,8 +157,8 @@ html{
     padding: 20px;
     color: var(--primary-color);
 
-    transition: 0.6s;
-    transition: transform 0.4s;
+    transition: 0.7s;
+    transition: transform 0.7s;
     transform: translateX(0) scale(1);
 }
 .repos .repo:hover, .repo:focus{
