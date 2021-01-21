@@ -8,21 +8,26 @@
     --background-color: #fffafafa;
     --title-color: #a189fa;
     --primary-color: #1D1A1A;
+    --shadow-color: #e6e6e6;
+    --shadow-color2: #e6e6e6;
 
-    transition: 0.6s;
+    transition: 0.4ms linear;
 }
 html{
     background-color:var(--background-color);
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
     color: var(--primary-color);
+    opacity: 100%;
 }
 .dark-mode:root{
     --background-color:#1D1A1A;
     --title-color: #8262F9;
     --primary-color: white;
+    --shadow-color: #000000;
+    --shadow-color2: #000000;
 
-    transition: 0.6s;
+    transition: 0.4ms linear;
 }
 .color-mode{
     text-align: end;
@@ -45,6 +50,9 @@ html{
     margin-top: 150px;
     height: 100vh;
 }
+#main .title{
+    text-align: center;
+}
 #main .title h1{
     font-size: 96px;
     font-weight: bold;
@@ -57,22 +65,32 @@ html{
     font-weight: lighter;
     font-size: 64px;
     color:var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 #main .title h2.contact{
-    margin-top: 10px;
+    background: linear-gradient(225deg, var(--shadow-color2),var(--background-color));;
+    border-radius: 22px;
+    
+    box-shadow:  -27px 27px 53px var(--shadow-color2),
+             27px -27px 53px var(--background-color);
+    margin-top: 10px auto;
+    width: 20%;
     font-size: 70px;
 }
 #main .title span{
     cursor: pointer;
-    transition: 0.4s;
 }
 #main .title span:hover{
     color: var(--title-color);
+    transition: 0.4s;
 }
 #main .title p{
     font-size: 20px;
     color: var(--primary-color);
+    margin-bottom: 10px;
 }
 
 #main .BiChevronsDown{
@@ -102,12 +120,15 @@ html{
 }
 
 #about-me{
+    background: linear-gradient(225deg, var(--shadow-color2),var(--background-color));;
+    border-radius: 22px;
+    
+    box-shadow:  -27px 27px 53px var(--shadow-color2),
+             27px -27px 53px var(--background-color);
     text-align: center;
+
     color: var(--primary-color);
     font-size: 24px;
-
-    border: 5px solid var(--title-color);
-    border-radius: 5px;
 
     padding: 15px;
     margin-right: 50px;
@@ -133,6 +154,22 @@ html{
 .title h1{
     margin-bottom: 5px;
 }
+.title  .hearth{
+    color: var(--title-color);
+    width: 45px;
+    animation: hearth 3s infinite;
+}
+@keyframes hearth{
+    0% {
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
 #projects .repos{
     margin-top: 20px;
     display: grid;
@@ -150,26 +187,24 @@ html{
 
 
 .repos .repo{
+    background: hsla(253, 92%, 76%, 1);
+
+    background: linear-gradient(180deg, hsla(253, 92%, 76%, 0.5) 0%, hsla(272, 85%, 79%, 0.5) 100%);
+    
+    background: -moz-linear-gradient(180deg, hsla(253, 92%, 76%, 0.5) 0%, hsla(272, 85%, 79%, 0.5) 100%);
+    
+    background: -webkit-linear-gradient(180deg, hsla(253, 92%, 76%, 0.5) 0%, hsla(272, 85%, 79%, 0.5) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A189FA", endColorstr="#CD9DF7", GradientType=1 );
     cursor: pointer;
-    background-color: var(--background-color);
-    border: 1px solid var(--title-color);
     border-radius: 5px;
     padding: 20px;
     color: var(--primary-color);
 
-    transition: 0.7s;
-    transition: transform 0.7s;
-    transform: translateX(0) scale(1);
+    transition: 0.4s;
 }
 .repos .repo:hover, .repo:focus{
     background-color: var(--title-color);
-    border: 1px solid var(--background-color);
-    color: var(--primary-color);
-
-    opacity: 80%;
-
-    transform: scale(1.02);
-    
 }
 
 .repo p{
@@ -178,11 +213,14 @@ html{
 
 @media screen and (max-width: 769px){
     #main{
-        width: 250vw;
-        margin-left: 50px;
+        width: 300vw;
+        margin: 0 auto;
     }
     #main .title h1{
         font-size: 120px;
+    }
+    #main .title h2.contact{
+        width: 70%;
     }
     #main span{
         font-size: 120px;
@@ -191,18 +229,20 @@ html{
         font-size: 30px;
     }
     #about-me{
-        width: 270vw;
-        margin: 0;
+        width: 300vw;
+        margin: 0 auto;
         margin-top: 200px;
     }
     #about-me p{
         font-size: 30px;
     }
     #projects .title{
+        margin-top: 100px;
         margin-left: 50px;
     }
     #projects{
-        width: 280vw;
+        margin: 0 auto;
+        width: 300vw;
     }
 
     .color-mode{
@@ -210,8 +250,8 @@ html{
     }
     #projects .repos{
         display: inline;
-        margin: 0;
-        width: 100%;
+        margin: 0 auto;
+        width: 300vw;
     }
     .repo{
         margin-bottom: 10px;

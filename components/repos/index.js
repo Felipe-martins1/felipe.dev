@@ -2,12 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 import { AiOutlineStar } from 'react-icons/ai';
 import { GoRepo } from 'react-icons/go'
+import { GiTechnoHeart } from 'react-icons/gi'
 
 const Repos = ({ repos }) => {
     return (
         <div id='projects'>
             <div className='title'>
-                <h1>Tech Contributions</h1>
+                <h1>Tech Contributions <GiTechnoHeart className='hearth' /> </h1>
                 <GoRepo /><span> {repos.length}</span>
             </div>
             <div className='repos'>

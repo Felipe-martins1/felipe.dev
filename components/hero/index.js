@@ -21,8 +21,8 @@ const Hero = () => {
                     <h2 className='contact'>
                         <Link href='https://github.com/Felipe-martins1'><span><AiFillGithub /></span></Link>
                         <Link href='https://linkedin.com/in/felipemartins1'><span><AiFillLinkedin /></span></Link>
+                        <p><AiOutlineMail /> felipe.dom.martins@gmail.com</p>
                     </h2>
-                    <p><AiOutlineMail /> felipe.dom.martins@gmail.com</p>
                 </div>
                 <BiChevronsDown onClick={scroll} className='BiChevronsDown' />
             </div>
