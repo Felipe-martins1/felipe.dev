@@ -25,7 +25,9 @@ export const metadata: Metadata = {
 export default function Blog() {
   return (
     <div className="text-sm font-medium text-neutral-500 mx-auto">
-      Nothing here yet. Wait for it... <span className="animate-pulse">⏳</span>
+      I'm currently preparing projects for this section. New content about
+      React, Next.js and software engineering is coming soon.{" "}
+      <span className="animate-pulse">⏳</span>
     </div>
   );
 }
