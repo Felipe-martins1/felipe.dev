@@ -8,6 +8,7 @@ import {
   Sun,
   User,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
@@ -57,10 +58,15 @@ const HeaderButton = ({
 export const Header = () => {
   const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
 
   const isActive = (href: string) => {
     return pathname === href;
   };
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <header className="sticky top-0 p-4 z-20 max-w-max mx-auto">
@@ -77,17 +83,21 @@ export const Header = () => {
           ))}
         </div>
         <span className="w-px self-stretch bg-gray-200 dark:bg-neutral-700 my-1" />
-        <button
-          type="button"
-          onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-          className={clsx(
-            "flex items-center rounded-full px-2 py-1 text-sm font-medium text-foreground",
-            "border border-transparent transition-colors duration-200",
-            "hover:bg-gray-200 dark:hover:bg-neutral-800 hover:border-gray-300 dark:hover:border-neutral-600",
-          )}
-        >
-          {resolvedTheme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-        </button>
+        {isMounted && (
+          <button
+            type="button"
+            onClick={() =>
+              setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            }
+            className={clsx(
+              "flex items-center rounded-full px-2 py-1 text-sm font-medium text-foreground",
+              "border border-transparent transition-colors duration-200",
+              "hover:bg-gray-200 dark:hover:bg-neutral-800 hover:border-gray-300 dark:hover:border-neutral-600",
+            )}
+          >
+            {resolvedTheme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
+        )}
       </div>
     </header>
   );
