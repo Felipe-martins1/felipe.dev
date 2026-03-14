@@ -1,64 +1,36 @@
-# FelipeMartins.dev(Resume)
-
-[![HitCount](https://hits.dwyl.com/Felipe-martins1/Felipe-martins1/felipedev.svg)](https://hits.dwyl.com/Felipe-martins1/Felipe-martins1/felipedev)
-
-
-This project is the source code of my personal website
-(https://felipe-martins1-dev.vercel.app/)
-
-![Preview](https://github.com/Felipe-martins1/felipe.dev/blob/master/print.png?raw=true)
-
-## Summary
-
-  - [Getting Started](#getting-started)
-  - [Runing the tests](#running-the-tests)
-  - [Deployment](#deployment)
-  - [Built With](#built-with)
-  - [Contributing](#contributing)
-  - [Versioning](#versioning)
-  - [Authors](#authors)
-  - [License](#license)
-  - [Acknowledgments](#acknowledgments)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on how to deploy the project on a live system.
+First, run the development server:
 
-### Prerequisites
-
-You need NodeJS and NPM in your computer
-
-```
-npm install 
+```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Layout
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Made with Figma. You can find the project [here](https://www.figma.com/file/iCcyG57iswbHEQRPrYzVoi/PortF%C3%B3lio?node-id=0%3A1)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Deployment
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-This project can be put into production using Vercel (without extra config)
+## Learn More
 
-## Built With
+To learn more about Next.js, take a look at the following resources:
 
-  - [NextJS](https://nextjs.org/) - The React Framework
-  - [Figma](https://www.figma.com/) - Online prototyping tool
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Authors
+## Deploy on Vercel
 
-  - **Felipe Martins** - [Linkedin](https://www.linkedin.com/in/felipemartins1/)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for
-details
-
-## Acknowledgments
-
-  This project has built during FullStack Master([devpleno](https://devpleno.com))
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

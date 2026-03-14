@@ -1,0 +1,20 @@
+export const techStackSection = {
+  title: "Tech Stack",
+  description: "Tools I use day to day.",
+  items: [
+    { name: "TypeScript", emoji: "🔷" },
+    { name: "React", emoji: "⚛️" },
+    { name: "Next", emoji: "▲" },
+    { name: "Node", emoji: "🟢" },
+    { name: "Nest", emoji: "📦" },
+    { name: "Express", emoji: "🚂" },
+    { name: "PostgreSQL", emoji: "🐘" },
+    { name: "Docker", emoji: "🐳" },
+    { name: "AWS", emoji: "☁️" },
+    { name: "GraphQL", emoji: "🔗" },
+    { name: "Redis", emoji: "🔴" },
+    { name: "Git", emoji: "🌿" },
+    { name: "Java", emoji: "☕" },
+    { name: "Angular", emoji: "🅰️" },
+  ],
+} as const;
