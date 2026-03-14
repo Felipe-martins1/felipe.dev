@@ -18,4 +18,5 @@ export const socialsSection = {
       icon: Mail,
     },
   ],
+  url: "https://www.felipemartins.dev.br",
 } as const;

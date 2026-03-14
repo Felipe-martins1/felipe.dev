@@ -1,9 +1,17 @@
-import { CalendarIcon, ChevronRight } from "lucide-react";
-
 import { FlipWords } from "@/components/ui/flip-words";
 import Image from "next/image";
-import { NoiseBackground } from "@/components/ui/noise-background";
+import type { Metadata } from "next";
 import { Posts } from "@/components/Posts";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+  },
+};
 import { SelectedWork } from "@/components/SelectedWork";
 import { SheduleCallButton } from "@/components/SheduleCallButton";
 import { TechStack } from "@/components/TechStack";
