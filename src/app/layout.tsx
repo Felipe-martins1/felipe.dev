@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     title: "Felipe Martins",
     description:
       "Senior Full-Stack Developer. I help companies build fast, scalable products — and make sure they look great doing it.",
-    images: ["/og-image.png"],
+    // images: ["/og-image.png"],
   },
 };
 
