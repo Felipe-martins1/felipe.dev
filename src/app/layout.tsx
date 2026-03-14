@@ -41,7 +41,7 @@ export default function RootLayout({
             </main>
           </div>
           <ShootingStars />
-          <footer className="w-full max-w-3xl mx-auto px-4 py-6 flex items-center justify-between text-sm text-gray-400 dark:text-neutral-500">
+          <footer className="w-full max-w-3xl mx-auto px-4 py-6 flex items-center justify-between text-sm text-gray-500">
             <span>© {new Date().getFullYear()} Felipe Martins</span>
             <div className="flex items-center gap-4">
               {socialsSection.links.map(({ icon: Icon, ...social }) => (
@@ -57,6 +57,7 @@ export default function RootLayout({
                       : "noopener noreferrer"
                   }
                   className="hover:text-foreground transition-colors duration-200"
+                  aria-label={social.name}
                 >
                   <Icon size={14} />
                 </a>

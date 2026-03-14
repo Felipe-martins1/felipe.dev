@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from "react";
 
 import clsx from "clsx";
+import { cn } from "@/utils/cn";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 
@@ -37,7 +38,8 @@ const HeaderButton = ({
   icon: Icon,
   name,
   selected,
-}: (typeof routes)[number] & { selected?: boolean }) => {
+  iconOnly,
+}: (typeof routes)[number] & { selected?: boolean; iconOnly?: boolean }) => {
   return (
     <a
       href={href}
@@ -50,7 +52,7 @@ const HeaderButton = ({
       )}
     >
       <Icon size={16} />
-      {name}
+      <span className={cn(iconOnly && "sr-only")}>{name}</span>
     </a>
   );
 };
@@ -71,7 +73,13 @@ export const Header = () => {
   return (
     <header className="sticky top-0 p-4 z-20 max-w-max mx-auto">
       <div className="flex gap-2 rounded-full bg-white dark:bg-neutral-900 drop-shadow-2xl shadow-neutral-500 border-gray-300 dark:border-neutral-700 border p-1">
-        <HeaderButton href="/" icon={House} name="" selected={isActive("/")} />
+        <HeaderButton
+          href="/"
+          icon={House}
+          name="Home"
+          selected={isActive("/")}
+          iconOnly
+        />
         <span className="w-px self-stretch bg-gray-200 dark:bg-neutral-700 my-1" />
         <div className="flex gap-4">
           {routes.map((route) => (
@@ -94,6 +102,12 @@ export const Header = () => {
               "border border-transparent transition-colors duration-200",
               "hover:bg-gray-200 dark:hover:bg-neutral-800 hover:border-gray-300 dark:hover:border-neutral-600",
             )}
+            aria-label={
+              resolvedTheme === "dark"
+                ? "Switch to light mode"
+                : "Switch to dark mode"
+            }
+            aria-pressed={resolvedTheme === "dark"}
           >
             {resolvedTheme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
