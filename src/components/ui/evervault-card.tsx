@@ -2,7 +2,7 @@
 /** biome-ignore-all lint/a11y/noStaticElementInteractions: <explanation> */
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useMotionTemplate } from "motion/react";
 
 import { cn } from "@/utils/cn";
