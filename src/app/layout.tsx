@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.URL ?? socialsSection.url),
   title: {
-    default: "Felipe Martins",
-    template: "%s | Felipe Martins",
+    default: "Felipe Martins - Software Engineer",
+    template: "%s | Felipe Martins - Software Engineer",
   },
   description:
     "Senior Full-Stack Developer. I help companies build fast, scalable products — and make sure they look great doing it.",

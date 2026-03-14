@@ -2,6 +2,10 @@ import { FlipWords } from "@/components/ui/flip-words";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { Posts } from "@/components/Posts";
+import { SelectedWork } from "@/components/SelectedWork";
+import { SheduleCallButton } from "@/components/SheduleCallButton";
+import { TechStack } from "@/components/TechStack";
+import { socialsSection } from "@/resources/socials";
 
 export const metadata: Metadata = {
   alternates: {
@@ -12,10 +16,6 @@ export const metadata: Metadata = {
     url: "/",
   },
 };
-import { SelectedWork } from "@/components/SelectedWork";
-import { SheduleCallButton } from "@/components/SheduleCallButton";
-import { TechStack } from "@/components/TechStack";
-import { socialsSection } from "@/resources/socials";
 
 export default function Home() {
   const phoneNumber = process.env.PHONE_NUMBER;
@@ -52,8 +52,8 @@ export default function Home() {
         </div>
 
         <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Hello, i'm Felipe, i build products people{" "}
-          <span className="sr-only">Love</span>
+          Hi, i'm Felipe Martins, i build products people{" "}
+          <span className="sr-only">love</span>
           <FlipWords words={["love", "trust", "need", "remember"]} />.
         </h1>
         <h2 className="text-lg text-gray-500 dark:text-neutral-400 mt-2">
